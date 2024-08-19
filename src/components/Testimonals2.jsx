@@ -1,7 +1,6 @@
 import client from '../assets/client.jpg'
 
 
-// eslint-disable-next-line react-refresh/only-export-components, react/display-name
 export default () => {
 
 

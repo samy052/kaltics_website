@@ -1,8 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
-// eslint-disable-next-line no-unused-vars
 import img1 from "../assets/prod2.jpg";
-// eslint-disable-next-line no-unused-vars
 import img2 from "../assets/prod3.jpg";
 import prod1 from "../assets/prod1.mp4";
 

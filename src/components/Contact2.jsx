@@ -1,4 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
+
+import FooterNav from "./FooterNav"
+import Navbar from "./Navbar"
+
 // eslint-disable-next-line react/display-name
 export default () => {
 
@@ -30,7 +34,8 @@ export default () => {
         },
     ]
 
-    return (
+    return <>
+    <Navbar/>
         <main id="contact" className="py-14 bg-gray-900">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-300 md:px-8">
                 <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
@@ -110,5 +115,6 @@ export default () => {
                 </div>
             </div>
         </main>
-    )
+        <FooterNav/>
+        </>
 }

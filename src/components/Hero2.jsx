@@ -2,23 +2,22 @@
 /* eslint-disable react/display-name */
 import { useEffect, useState } from "react";
 import logo from "../assets/kalticsblack.png";
-
 import { useNavigate } from "react-router-dom";
 import { array2 } from "../main";
+
+
 
 export default () => {
   const [state, setState] = useState(false);
   const navigate = useNavigate();
 
+
   const navigation = [
     { title: "Services", path: "#services" },
     { title: "Innovation", path: "#innovation" },
     { title: "Reviews", path: "#reviews" },
-    { title: "Career", path: "#career" }
-
+    { title: "Career", path: "/careers" },
   ];
-
-  
 
   useEffect(() => {
     document.onclick = (e) => {
@@ -32,11 +31,10 @@ export default () => {
 
   }
 
-
-
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block" id="home">
       <a href="javascript:void(0)">
+      
         <img src={logo} width={150} height={50} alt="logo" />
       </a>
       <div className="md:hidden">
@@ -93,16 +91,18 @@ export default () => {
             <Brand />
           </div>
           <nav
-            className={`pb-5 md:text-sm ${state
-              ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
-              : ""
-              }`}
+            className={`pb-5 md:text-sm ${
+              state
+                ? "absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
+                : ""
+            }`}
           >
             <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
               <Brand />
               <div
-                className={`flex-1 items-center mt-8 md:mt-0 md:flex ${state ? "block" : "hidden"
-                  } `}
+                className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
+                  state ? "block" : "hidden"
+                } `}
               >
                 <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                   {navigation.map((item, idx) => {
@@ -120,7 +120,7 @@ export default () => {
                 </ul>
                 <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
                   >
                     Contact Us
@@ -206,38 +206,7 @@ export default () => {
                 </div>
 
               ))}
-
-              {/* <div className="flex flex-col items-center gap-x-6 p-4 rounded-lg bg-indigo-50 cursor-pointer h-30 w-40">
-                <img className="w-16 h-16 " src={dev} />
-                <span className="block font-bold text-sm mt-0.5 text-center">
-                  Product Development
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-x-6 p-4 rounded-lg bg-indigo-50 cursor-pointer h-30 w-40">
-                <img className="w-16 h-16 " src={sap} />
-                <span className="block font-bold text-sm mt-0.5">
-                  Sap Development
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-x-6 p-4 rounded-lg bg-indigo-50 cursor-pointer h-30 w-40">
-                <img className="w-16 h-16 " src={cs} />
-                <span className="block font-bold text-sm mt-0.5">
-                  Cyber Security
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-x-6 p-4 rounded-lg bg-indigo-50 cursor-pointer h-30 w-40">
-                <img className="w-16 h-16 " src={script} />
-                <span className="block font-bold text-sm mt-0.5 text-center">
-                  Script/Bot Development
-                </span>
-              </div>
-              <div className="flex flex-col items-center gap-x-6 p-4 rounded-lg bg-indigo-50 cursor-pointer h-30 w-40">
-                <img className="w-16 h-16 " src={cld} />
-                <span className="block font-bold text-sm mt-0.5">
-                  Cloud Services
-                </span>
-              </div> */}
-            </div>
+          </div>
           </div>
         </section>
       </div>
